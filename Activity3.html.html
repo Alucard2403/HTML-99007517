@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scorecard</title>
+    <style>
+        .container{
+           
+    text-align: center;
+        }
+        .con{
+            border: 2px solid;
+    display: inline-block;
+        }
+    </style>
+    <script>
+        function game(){
+            var tex1=document.getElementById("team1").value;
+	console.log(tex1);
+	var tex2=document.getElementById("team2").value;
+	console.log(tex2);
+	var value1=document.getElementById("score1").value;
+	console.log(value1);
+	var value2=document.getElementById("score2").value;
+	console.log(value2);
+	if(value1>value2)
+	{
+	" onclick="(value1-value2)">Result</button>
+	}
+	else if(value2>value1)
+	{
+	" onclick="(value1-value2)">Result</button>
+	}
+	else
+	{
+	" onclick="Match is Drawn">Result</button>
+	}
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+    <p>KFCC cricket club 
+    </p>
+        <form style="padding: 32px;
+        display: inline-block;" name="myform">
+            <label>Enter the name team 1</label><br>
+  <input type="text" placeholder="Enter team name" name="name" id="team1"><br>
+  <label>Enter the name team 2</label><br>
+
+  <input type="text" placeholder="Enter team name" id="team2"><br>
+            </form>
+            <form class="con2" style="display: inline-block;"> <label>Score 1</label><br>
+                <input type="text" placeholder="Enter score" id="score1"><br>
+                <label>Score 2</label><br>
+                <input type="text" placeholder="Enter Score" id="score2"><br>
+            </form>
+           <br>
+           <button style="color: rgb(125, 125, 216); background-color: red;" onclick="game()">Result</button>
+    </div>
+
+</body>
+</html>
