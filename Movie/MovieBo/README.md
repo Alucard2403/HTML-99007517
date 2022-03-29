@@ -19,7 +19,7 @@ public class MovieBo {
 	public boolean insertMovie(Movie1 m)throws Exception{
 		// DB logic
 		
-		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demodb","root","Jahnavee45&");
+		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/Movie","root","Jai@2403");
 		Statement s = c.createStatement();
 		boolean b = s.execute("insert into movie values("+m.getMovieid()+",'"+m.getMoviename()+"','"+m.getCast1()+"','"+m.getCast2()+"','"+m.getReleasedate()+"','"+m.getLanguage()+"',"+m.getLength()+",'"+m.getMovietype()+"',"+m.getProductionid()+")");
 		c.close();
@@ -29,7 +29,7 @@ public class MovieBo {
 	public List<Movie1> getAllMovies()throws Exception{
 		List<Movie1> al = new ArrayList<Movie1>();
 		
-		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demodb","root","Jahnavee45&");
+		Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/Movie","root","Jai@2403");
 		PreparedStatement ps = c.prepareStatement("select * from movie");
 		ResultSet rs = ps.executeQuery();
 		
@@ -50,7 +50,7 @@ public class MovieBo {
 		String moviename = sc.next();
 		System.out.println("Enter updated movieid");
 		int movieid = sc.nextInt();
-		try(Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demodb","root","Jahnavee45&");
+		try(Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/Movie","root","Jai@2403");
 		PreparedStatement ps = c.prepareStatement(sql);){
 			ps.setInt(1,movieid);
 			ps.setString(2,moviename);
@@ -68,7 +68,7 @@ public class MovieBo {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter movieid");
 		int movieid = sc.nextInt();
-		try(Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/demodb","root","Jahnavee45&");
+		try(Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/Movie","root","Jai@2403");
 		PreparedStatement ps = c.prepareStatement(sql);){
 			ps.setInt(1,movieid);
 			ps.executeUpdate();
